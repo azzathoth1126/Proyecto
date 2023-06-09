@@ -138,6 +138,9 @@ def administracionPersonal(personal):
         elif opc == "2":
             bajas(personal)
         elif opc == "3":
+            for i in personal:
+                print(i)
+                print(("\n"))
             cambio_puesto(personal)
         elif opc == "4":
             break
@@ -164,8 +167,8 @@ def atencionClientes(inventario):
 
         if opc == "1":
             '''if len(inventario) == 0:
-                                                    print("Sin inventario.")
-                                                else:'''
+            print("Sin inventario.")
+            else:'''
             print("Suministros en inventario:")
             mostrar_inventario(inventario)
             nombre_producto = input("Ingrese el nombre del producto que desea comprar: ")
@@ -201,8 +204,8 @@ def atencionClientes(inventario):
 
 
 def menu(intOption):
-    inventario = []
-    personal = []
+    inventario = [{'nombre': "Huevos", 'precio': 50}, {'nombre': "Agua", 'precio': 15}, {'nombre': "Jugo", 'precio': 24}]
+    personal = [{'nombre': "Alexis", 'apellido': "Martinez", 'puesto': "CEO", 'codigo_t': "T9999"}]
 
     if intOption == 1:
         administrarInventario(inventario)
